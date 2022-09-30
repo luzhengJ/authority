@@ -1,28 +1,28 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
-  devServer:{
+  devServer: {
     // 端口号
-    port:8080,
+    port: 8081,
     // 主机号
-    host:"localhost",
+    host: "localhost",
     // 开启项目时是否自动打开浏览器
-    open:true,
+    open: true,
     // 是否开启https
-    https:false,
+    https: false,
     // 配置跨域
-    proxy:{
+    proxy: {
       // 代理名称
-     [process.env.VUE_APP_BASE_API]:{
+      [process.env.VUE_APP_BASE_API]: {
         // 跨域地址
-        target:process.env.VUE_APP_SERVICE_URL,
+        target: process.env.VUE_APP_SERVICE_URL,
         // 开启跨域
-        changeOrigin:true,
+        changeOrigin: true,
         // 路径重写
-        pathRewrite:{
-          ["^"+process.env.VUE_APP_BASE_API]:""
-        }
-      }
-    }
-  }
-})
+        pathRewrite: {
+          ["^" + process.env.VUE_APP_BASE_API]: "",
+        },
+      },
+    },
+  },
+});

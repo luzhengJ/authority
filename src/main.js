@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI);
 
 import "../src/utils/request"
-
+import "./style/reset.css"
 
 new Vue({
   router,
