@@ -76,7 +76,7 @@ export default {
       );
       console.log(response);
       if (response.data.token) {
-        this.$router.push("/about");
+        this.$router.push('/');
         this.$message.success("登录成功");
       }
     },
